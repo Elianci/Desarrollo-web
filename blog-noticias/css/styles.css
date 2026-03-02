@@ -1,0 +1,85 @@
+/* Fuente y fondo general */
+body {
+    font-family: Times New Roman, Modern No 20;
+    background-color: #eddada;
+    margin: 0;
+    color: #7d5a44;
+}
+
+/* Header */
+header {
+    background-color: #e9acbb;
+    color: #f6ead4;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header h2 {
+    margin: 5px 0;
+    font-weight: normal;
+}
+
+/* Menú */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #d6d4ad;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Contenido principal */
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+/* Noticias */
+article {
+    background: #C2c395;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+article.destacada {
+    font-size: 1.1em;
+    background-color: #fffaf2;
+}
+
+/* Barra lateral */
+aside {
+    width: 250px;
+    background: #818263;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #ddbaae ;
+    color: #efd7cf;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
