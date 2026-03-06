@@ -2,19 +2,251 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Menú de Formularios</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>ClonFlix</title>
+  <!-- Fuente bonita desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Paleta: #a00c1 #310101 #f592a2 #de5f7f #720307 #563624 */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #310101;
+      color: #f592a2;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #720307;
+      padding: 15px 30px;
+      color: #fff;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+      color: #de5f7f;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f592a2;
+      font-weight: 500;
+    }
+
+    .btn {
+      background: #de5f7f;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #310101;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #f592a2;
+      color: #310101;
+    }
+
+    /* Hero */
+    .hero {
+      background: url("imagenes/hero.jpg") center/cover no-repeat;   
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #f592a2;
+      font-weight: 600;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #de5f7f;
+    }
+
+    /* Catálogo */
+    .catalogo {
+      padding: 40px;
+    }
+
+    .catalogo h2 {
+      color: #de5f7f;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 15px;
+    }
+
+    .grid img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(255,255,255,0.2);
+      transition: transform 0.3s, border 0.3s;
+    }
+
+    .grid img:hover {
+      transform: scale(1.05);
+      border: 2px solid #f592a2;
+    }
+
+    /* Formulario de registro */
+    .registro {
+      background: #563624;
+      padding: 40px;
+      margin: 40px auto;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .registro h2 {
+      text-align: center;
+      color: #f592a2;
+      margin-bottom: 20px;
+    }
+
+    .registro label {
+      display: block;
+      margin: 12px 0 6px;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .registro input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #de5f7f;
+      border-radius: 6px;
+      background: #310101;
+      color: #f592a2;
+    }
+
+    .registro input:focus {
+      border-color: #f592a2;
+      outline: none;
+    }
+
+    .registro button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: #de5f7f;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #310101;
+      transition: background 0.3s;
+    }
+
+    .registro button:hover {
+      background: #f592a2;
+    }
+
+    /* Footer */
+    footer {
+      background: #563624;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 2px solid #de5f7f;
+      color: #f592a2;
+    }
+  </style>
 </head>
 <body>
-  <h1>Proyecto de Formularios</h1>
-  <p>Selecciona el formulario que quieras abrir:</p>
-  <ul>
-    <li><a href="permiso.html">Formulario de Permiso / ID Card</a></li>
-    <li><a href="medico.html">Formulario Médico</a></li>
-    <li><a href="admision.html">Formulario de Admisión</a></li>
-    <li><a href="gimnasio.html">Formulario de Registro - Gimnasio</a></li>
-    <li><a href="inscripcion.html">Formulario de Inscripción</a></li>
-  </ul>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">ClonFlix</div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Series</a></li>
+        <li><a href="#">Películas</a></li>
+        <li><a href="#">Mi Lista</a></li>
+      </ul>
+    </nav>
+    <button class="btn">Iniciar Sesión</button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Tu entretenimiento, reinventado</h1>
+      <p>Disfruta de miles de películas y series con un estilo único.</p>
+      <button class="btn">Comenzar ahora</button>
+    </div>
+  </section>
+
+  <!-- Catálogo Populares -->
+  <section class="catalogo">
+    <h2>Populares</h2>
+    <div class="grid">
+      <img src="Imagenes/pelicula1.jpg" alt="Película 1">
+      <img src="Imagenes/pelicula2.jpg" alt="Película 2">
+      <img src="Imagenes/pelicula3.jpg" alt="Película 3">
+      <img src="Imagenes/pelicula4.jpg" alt="Película 4">
+      <img src="Imagenes/pelicula5.jpg" alt="Película 5">
+      <img src="Imagenes/pelicula6.jpg" alt="Película 6">
+      <img src="Imagenes/pelicula7.jpg" alt="Película 7">
+    </div>
+  </section>
+
+  <!-- Catálogo Nuevos lanzamientos -->
+  <section class="catalogo">
+    <h2>Nuevos lanzamientos</h2>
+    <div class="grid">
+      <img src="Imagenes/nuevo1.jpg" alt="Nuevo 1">
+      <img src="Imagenes/nuevo2.jpg" alt="Nuevo 2">
+      <img src="Imagenes/nuevo3.jpg" alt="Nuevo 3">
+      <img src="Imagenes/nuevo4.jpg" alt="Nuevo 4">
+      <img src="Imagenes/nuevo5.jpg" alt="Nuevo 5">
+      <img src="Imagenes/nuevo6.jpg" alt="Nuevo 6">
+      <img src="Imagenes/nuevo7.jpg" alt="Nuevo 7">
+    </div>
+  </section>
+
+  <!-- Formulario de registro -->
+  <section class="registro">
+    <h2>Regístrate en ClonFlix</h2>
+    <form>
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" placeholder="********" required>
+
+      <button type="submit">Crear cuenta</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 ClonFlix - Tu plataforma personalizada</p>
+  </footer>
 </body>
 </html>
-<link rel="stylesheet" href="css/styles.css">
